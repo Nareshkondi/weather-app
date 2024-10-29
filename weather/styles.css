@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: url(weather.jpg);
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+#search {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    background-color: #0052cc;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#search-btn:hover {
+    background-color: #003d99;
+}
+
+.weather-content {
+    flex: 2;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    margin-right: 20px;
+}
+
+.temperature {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.city-name {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.date-time {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.condition {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.condition img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.weather-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.detail-box {
+    flex: 1 1 calc(50% - 10px);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.detail-box h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.detail-box p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.forecast {
+    flex: 1;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.forecast-item {
+    background: rgba(255, 255, 255, 0.2);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .weather-content, .forecast {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .forecast {
+        max-height: 300px;
+    }
+
+    .detail-box {
+        flex: 1 1 100%;
+    }
+}
